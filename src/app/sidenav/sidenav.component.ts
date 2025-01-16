@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-sidenav',
   imports: [],
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './sidenav.component.css'
 })
 export class SidenavComponent {
-
-}
+  collappsed = false;
+  items = []
+} 
