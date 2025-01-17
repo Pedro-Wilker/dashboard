@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { SidenavComponent } from "./sidenav/sidenav.component";
+import { LeftSidebarComponent } from "./left-sidebar/left-sidebar.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SidenavComponent],
+  imports: [LeftSidebarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'dashboard';
+ 
 }
