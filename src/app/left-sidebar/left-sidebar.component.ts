@@ -15,32 +15,32 @@ export class LeftSidebarComponent {
       routeLink: 'dashboard'
     },
     {
-      icon: 'fa-file',
+      icon: 'fal fa-file',
       label: 'Pages',
       routeLink: 'pages',
     },
     {
-      icon: 'fa-tags',
+      icon: 'fal fa-tags',
       label: 'Coupens',
       routeLink: 'coupens'
     },
     {
-      icon: 'fa-photo-film',
+      icon: 'fal fa-photo-film',
       label: 'Media',
       routeLink: 'media'
     },
     {
-      icon: 'fa-bag-shopping',
+      icon: 'fal fa-bag-shopping',
       label: 'products',
       routeLink: 'products'
     },
     {
-      icon: 'fa-gear',
+      icon: 'fal fa-gear',
       label: 'Settings',
       routeLink: 'settings'
     },
     {
-      icon: 'fa-chart-simple',
+      icon: 'fal fa-chart-simple',
       label: 'Statistics',
       routeLink: 'statistics'
     },
