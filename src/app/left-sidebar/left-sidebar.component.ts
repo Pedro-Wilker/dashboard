@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, input, output } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-left-sidebar',
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './left-sidebar.component.html',
   styleUrl: './left-sidebar.component.css'
 })
 export class LeftSidebarComponent {
+  isLeftSidebarCollapsed = input.required<boolean>();
+  changeIsLeftSidebarCollapsed = output<boolean>();
   items = [
     {
       icon: 'fal fa-home',
@@ -25,24 +28,32 @@ export class LeftSidebarComponent {
       routeLink: 'coupens'
     },
     {
-      icon: 'fal fa-photo-film',
+      icon: 'fa fa-book',
       label: 'Media',
       routeLink: 'media'
     },
     {
-      icon: 'fal fa-bag-shopping',
-      label: 'products',
+      icon: 'fa fa-pencil',
+      label: 'Products',
       routeLink: 'products'
     },
     {
-      icon: 'fal fa-gear',
+      icon: 'fa fa-cog',
       label: 'Settings',
       routeLink: 'settings'
     },
     {
-      icon: 'fal fa-chart-simple',
+      icon: 'fa fa-terminal',
       label: 'Statistics',
       routeLink: 'statistics'
     },
   ];
+
+  toggleCollapse(): void {
+    this.changeIsLeftSidebarCollapsed.emit(!this.isLeftSidebarCollapsed());
+  }
+
+  closeSidenav(): void {
+    this.changeIsLeftSidebarCollapsed.emit(true);
+  }
 }
