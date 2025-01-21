@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {MatToolbarModule} from '@angular/material/toolbar'
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-body',
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, MatToolbarModule, MatIconModule],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
 })

@@ -5,6 +5,14 @@ export const APP_ROUTES: Routes = [
         path: '', pathMatch: 'full', redirectTo: 'dashboard'
     },
     {
+        path: 'contact',
+        loadComponent: () => import('./contact/contact.component').then(c => c.ContactComponent),
+    },
+    {
+        path: 'new-contact',
+        loadComponent: () => import('./newcontact/newcontact.component').then(c => c.NewcontactComponent),
+    },
+    {
         path: 'pages',
         loadChildren: () => import('./pages/pages.routes').then(r => r.PAGES_ROUTES),
     },
